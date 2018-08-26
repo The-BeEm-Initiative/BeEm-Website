@@ -136,3 +136,23 @@ body {
   padding: 2px;
   border-radius:10%;
 }
+
+/* 
+* Leaderboard
+*/
+.leader-btn a{
+  padding: 10px;
+  margin: 0 450px;
+  text-align: center;
+  background: #2e6cd1;
+  color: #fff;
+  border-radius: 10% / 50%;
+  font-weight: bolder;
+}
+
+.leader-btn a:hover {
+  background: #fff;
+  color: #2d6cd1 !important;
+  border-color: #2d6cd1;
+  border-width: 5px;
+}
