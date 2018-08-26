@@ -98,3 +98,8 @@ body {
 .questions h2 {
   font-weight: bolder;
 }
+
+.questions ol li {
+  font-weight: bold;
+  list-style: none;
+}
