@@ -76,6 +76,8 @@ body {
   background-position: center;
   color: #eee !important;
   padding: 20px;
+  margin: 1em;
+  border-radius: 2.5% / 5%;
   z-index: 1;
 }
 
@@ -147,10 +149,12 @@ body {
 /* 
 * Leaderboard
 */
-.leader-btn a{
-  padding: 10px;
-  margin: 0 450px;
+.leader-btn {
   text-align: center;
+}
+
+.leader-btn a {
+  padding: 10px;
   background: #2e6cd1;
   color: #fff;
   border-radius: 10% / 50%;
