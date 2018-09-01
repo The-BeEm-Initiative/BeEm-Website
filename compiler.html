@@ -18,6 +18,62 @@
   <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 
   <link rel="stylesheet" href="css/compiler-css/codemirror.css">
+
+  <!-- theme css files -->
+  <link rel="stylesheet" href="css/compiler-css/theme/3024-day.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/3024-night.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/abcdef.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/ambiance.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/base16-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/bespin.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/base16-light.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/blackboard.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/cobalt.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/colorforth.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/dracula.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/duotone-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/duotone-light.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/eclipse.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/elegant.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/erlang-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/gruvbox-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/hopscotch.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/icecoder.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/isotope.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/lesser-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/liquibyte.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/lucario.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/material.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/mbo.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/mdn-like.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/midnight.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/monokai.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/neat.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/neo.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/night.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/oceanic-next.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/panda-syntax.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/paraiso-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/paraiso-light.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/pastel-on-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/railscasts.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/rubyblue.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/seti.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/shadowfox.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/solarized.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/the-matrix.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/tomorrow-night-eighties.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/ttcn.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/twilight.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/vibrant-ink.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/xq-dark.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/xq-light.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/yeti.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/idea.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/darcula.css">
+  <link rel="stylesheet" href="css/compiler-css/theme/zenburn.css">
+
   <script src="js/compiler-js/codemirror.js"></script>
   <script src="js/compiler-js/mode/simple.js"></script>
   <script src="js/compiler-js/mode/clike.js"></script>
@@ -61,7 +117,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
-          SUPERMAN
+          SUPERMAN &amp; BATMAN
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
@@ -74,6 +130,8 @@
               <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
             </button>
           </div>
+          
+          <div class="col-md-4">
           <select value="34" class="form-control" id="selectLanguageBtn">
             <!-- <option value="1" mode="text/x-sh">Bash (4.4)</option>
             <option value="2" mode="text/x-sh">Bash (4.0)</option>
@@ -119,6 +177,68 @@
             <option value="42" mode="text/x-rustsrc">Rust (1.20.0)</option> -->
             <option value="43" mode="text/plain">Text (plain text)</option>
           </select>
+          </div>
+          <div class="col-xs-2"><p style="color: #fff;">Theme:</p></div>
+          <div class="col-md-6">
+            <p><select class="form-control" id="theme_select">
+              <option selected>default</option>
+              <option>3024-day</option>
+              <option>3024-night</option>
+              <option>abcdef</option>
+              <option>ambiance</option>
+              <option>base16-dark</option>
+              <option>base16-light</option>
+              <option>bespin</option>
+              <option>blackboard</option>
+              <option>cobalt</option>
+              <option>colorforth</option>
+              <option>darcula</option>
+              <option>dracula</option>
+              <option>duotone-dark</option>
+              <option>duotone-light</option>
+              <option>eclipse</option>
+              <option>elegant</option>
+              <option>erlang-dark</option>
+              <option>gruvbox-dark</option>
+              <option>hopscotch</option>
+              <option>icecoder</option>
+              <option>idea</option>
+              <option>isotope</option>
+              <option>lesser-dark</option>
+              <option>liquibyte</option>
+              <option>lucario</option>
+              <option>material</option>
+              <option>mbo</option>
+              <option>mdn-like</option>
+              <option>midnight</option>
+              <option>monokai</option>
+              <option>neat</option>
+              <option>neo</option>
+              <option>night</option>
+              <option>oceanic-next</option>
+              <option>panda-syntax</option>
+              <option>paraiso-dark</option>
+              <option>paraiso-light</option>
+              <option>pastel-on-dark</option>
+              <option>railscasts</option>
+              <option>rubyblue</option>
+              <option>seti</option>
+              <option>shadowfox</option>
+              <option>solarized dark</option>
+              <option>solarized light</option>
+              <option>the-matrix</option>
+              <option>tomorrow-night-bright</option>
+              <option>tomorrow-night-eighties</option>
+              <option>ttcn</option>
+              <option>twilight</option>
+              <option>vibrant-ink</option>
+              <option>xq-dark</option>
+              <option>xq-light</option>
+              <option>yeti</option>
+              <option>zenburn</option>
+            </select></p>
+            </div>
+
         </div>
         <button class="btn btn-success" id="runBtn" data-loading-text="Running...">
           <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run (F9)
@@ -173,5 +293,31 @@
       </div>
     </div> -->
   </div>
+
+  <!-- Script for changing theme -->
+  <!-- <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      lineNumbers: true,
+      styleActiveLine: true,
+      matchBrackets: true
+    });
+    var input = document.getElementById("select");
+    function selectTheme() {
+      var theme = input.options[input.selectedIndex].textContent;
+      editor.setOption("theme", theme);
+      location.hash = "#" + theme;
+    }
+    var choice = (location.hash && location.hash.slice(1)) ||
+                 (document.location.search &&
+                  decodeURIComponent(document.location.search.slice(1)));
+    if (choice) {
+      input.value = choice;
+      editor.setOption("theme", choice);
+    }
+    CodeMirror.on(window, "hashchange", function() {
+      var theme = location.hash.slice(1);
+      if (theme) { input.value = theme; selectTheme(); }
+    });
+  </script> -->
 </body>
 </html>
