@@ -1,7 +1,7 @@
 :root {
-  --main-border-colour: #000;
-  --primary-background-colour: #282a36;
-  --secondary-background-colour: #111;
+  --main-border-colour: #ddd;
+  --primary-background-colour: #f8f8f8;
+  --secondary-background-colour: #ececec;
   --primary-brand-colour: #333333;
 }
 
