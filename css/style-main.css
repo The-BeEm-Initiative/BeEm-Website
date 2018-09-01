@@ -2,6 +2,13 @@
  * general
  */
 
+:root {
+--main-border-colour: #ddd;
+--primary-background-colour: #f8f8f8;
+--secondary-background-colour: #ececec;
+--primary-brand-colour: #333333;
+}
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -147,10 +154,12 @@ body {
 /* 
 * Leaderboard
 */
+.leader-btn {
+  text-align: center;
+}
+
 .leader-btn a{
   padding: 10px;
-  margin: 0 450px;
-  text-align: center;
   background: #2e6cd1;
   color: #fff;
   border-radius: 10% / 50%;
@@ -162,4 +171,27 @@ body {
   color: #2d6cd1 !important;
   border-color: #2d6cd1;
   border-width: 5px;
+}
+
+/* 
+* Footer
+*/
+
+#footer {
+  background-color: var(--primary-brand-colour);
+  border-top: 1px solid var(--main-border-colour);
+  padding-top: 40px;
+  text-align: center;
+  min-height: 100px;
+  color: #777;
+}
+
+#footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ddd;
+}
+
+#footer a:hover {
+  color: #fff;
 }
