@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Question #1 | The BeEm Initiative</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="../css/compiler-css/ide.css">
     <link rel="stylesheet" href="/questions/css-questions/question-style.css">
@@ -106,9 +107,12 @@
 
     <script src="../js/compiler-js/keymap/vim.js"></script>
 
-    <script src="js-questions/1.js"></script>
+    <!-- <script src="js-questions/1.js"></script> -->
+    <script src="../js/compiler-js/ide.js"></script>
 </head>
 <body>
+    <span id="questionNumber" title="1"></span>
+
         <div class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
 
             <div class="container">
@@ -299,6 +303,7 @@
                         <div id="inputEditor" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
                         <div id="outputEditor" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
                         </div>
+                        <button id="submit" onclick="onSubmit()">Submit</button>
                     </div>
                 </div>
             </div>
