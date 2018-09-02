@@ -6,7 +6,7 @@
 --main-border-colour: #ddd;
 --primary-background-colour: #f8f8f8;
 --secondary-background-colour: #ececec;
---primary-brand-colour: #333333;
+--primary-brand-colour: #1a1a1a;
 }
 
 * {
@@ -47,7 +47,7 @@ a:hover {
 
 body {
   background: #fff;
-  font-family: 'Source Code Pro', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: normal;
@@ -83,6 +83,8 @@ body {
   background-position: center;
   color: #eee !important;
   padding: 20px;
+  margin: 1em;
+  border-radius: 2.5% / 5%;
   z-index: 1;
 }
 
@@ -159,18 +161,21 @@ body {
 }
 
 .leader-btn a{
-  padding: 10px;
-  background: #2e6cd1;
-  color: #fff;
+  padding: 7px;
+  background: #fef200;
+  color: #ee1c25 !important;
+  border-style: solid;
+  border-color: #ee1c25 !important;
   border-radius: 10% / 50%;
-  font-weight: bolder;
+  font-size: 35px;
+  font-weight: 900;
 }
 
 .leader-btn a:hover {
-  background: #fff;
-  color: #2d6cd1 !important;
-  border-color: #2d6cd1;
-  border-width: 5px;
+  background: #fff100;
+  color: #282425 !important;
+  border-color: #fff100 !important;
+  
 }
 
 /* 

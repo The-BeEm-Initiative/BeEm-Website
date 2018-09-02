@@ -2,8 +2,11 @@
   --main-border-colour: #ddd;
   --primary-background-colour: #f8f8f8;
   --secondary-background-colour: #ececec;
-  --primary-brand-colour: #333333;
+  --primary-brand-colour: #1b1b1b;
 }
+
+/* Google font import */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 html, body {
   height: 100%;
@@ -11,7 +14,7 @@ html, body {
 
 body {
   background-color: var(--primary-background-colour);
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', 'Source Code Pro',  sans-serif;
 }
 
 .navbar-default {

@@ -246,46 +246,26 @@
       <div id="inputEditor" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
       <div id="outputEditor" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
     </div>
-
-    <div class="row">
-      <div id="footer">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <p>
-          <i class="glyphicon glyphicon-copyright-mark"></i> 2018 <a href="/index.html">The BeEm Initiative</a>
-        </p>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <p>
-          Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i>/<i class="glyphicon glyphicon-menu-right"></i></span> by Superman &amp; Batman.
-        </p>
+  </div>
+  
+  <!-- start footer -->
+  <footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p>
+                <i class="glyphicon glyphicon-copyright-mark"></i> 2018 <a href="/index.html">The BeEm Initiative</a>
+                </p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p>
+                Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/mano-j"><img src="/assets/images/superman.png" alt="superman" height="25px" width="30px"></a> &amp; <a href="https://github.com/sprince0031"><img src="/assets/images/batman.png" alt="batman" height="25px" width="35px"></a>.
+                </p>
+            </div>
         </div>
     </div>
-  </div>
+  </footer>
+  <!-- end footer -->
 
-  <!-- Script for changing theme -->
-  <!-- <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      lineNumbers: true,
-      styleActiveLine: true,
-      matchBrackets: true
-    });
-    var input = document.getElementById("select");
-    function selectTheme() {
-      var theme = input.options[input.selectedIndex].textContent;
-      editor.setOption("theme", theme);
-      location.hash = "#" + theme;
-    }
-    var choice = (location.hash && location.hash.slice(1)) ||
-                 (document.location.search &&
-                  decodeURIComponent(document.location.search.slice(1)));
-    if (choice) {
-      input.value = choice;
-      editor.setOption("theme", choice);
-    }
-    CodeMirror.on(window, "hashchange", function() {
-      var theme = location.hash.slice(1);
-      if (theme) { input.value = theme; selectTheme(); }
-    });
-  </script> -->
 </body>
 </html>
