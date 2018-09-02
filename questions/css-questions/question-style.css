@@ -1,0 +1,144 @@
+/* 
+* General
+*/
+
+:root {
+    --main-border-colour: #ddd;
+    --primary-background-colour: #1a1a1a;
+    --secondary-background-colour: #ececec;
+    --primary-brand-colour: #1a1a1a;
+}
+    
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+    
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 9.411764705882353px;
+    }
+}
+    
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: var(--secondary-background-colour) !important;
+}
+
+/* 
+* Navbar-main
+*/
+.pagescroll a:hover {
+    background: #282425 !important;
+}
+
+/* 
+* Questions
+*/
+.questions {
+    padding: 20px;
+}
+
+.questions h1 {
+    font-weight: bolder;
+    color: var(--primary-background-colour);
+}
+
+.questions ol li {
+    font-weight: bold;
+    list-style: none;
+}
+
+.questions ol li p {
+    font-weight: 200;
+}
+
+.questions .inner-lists li {
+    font-weight: 200;
+    list-style: numeric;
+}
+
+.questions fieldset {
+    -moz-border-radius:5px;  
+    border-radius: 5px;  
+    -webkit-border-radius: 5px;
+}
+
+.questions p {
+    color: var(--primary-background-colour);
+}
+
+/* 
+* Labels
+*/
+.easy {
+    background-color:#0a0;
+    color: #fff;
+    padding: 5px;
+    border-radius:10% / 20%;
+}
+
+.medium {
+    background-color:#d30;
+    color: #fff;
+    padding: 2px;
+    border-radius:10%;
+}
+
+.hard {
+    background-color: #f00;
+    color: #fff;
+    padding: 2px;
+    border-radius:10%;
+}
+
+/* 
+* Playgound btn
+*/
+.playground-btn {
+    text-align: center;
+}
+
+.playground-btn a{
+    padding: 7px;
+    background: #fef200;
+    color: #ee1c25 !important;
+    border-style: solid;
+    border-color: #ee1c25 !important;
+    border-radius: 10% / 50%;
+    font-size: 35px;
+    font-weight: 900;
+}
+  
+.playground-btn a:hover {
+background: #fff100;
+color: #282425 !important;
+border-color: #fff100 !important;
+
+}
+
+/* 
+* Footer
+*/
+
+#footer {
+    background-color: var(--primary-brand-colour);
+    border-top: 1px solid var(--main-border-colour);
+    padding-top: 40px;
+    text-align: center;
+    min-height: 100px;
+    color: #777;
+  }
+  
+  #footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ddd;
+  }
+  
+  #footer a:hover {
+    color: #fff;
+  }

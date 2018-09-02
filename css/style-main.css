@@ -1,6 +1,6 @@
-/*
- * general
- */
+/* 
+* General
+*/
 
 :root {
 --main-border-colour: #ddd;
@@ -127,6 +127,14 @@ body {
   -moz-border-radius:5px;  
   border-radius: 5px;  
   -webkit-border-radius: 5px;
+}
+
+.questions li a {
+  box-shadow: none;
+}
+
+.questions li a:hover {
+  box-shadow: 5px 10px !important;
 }
 
 /* 
