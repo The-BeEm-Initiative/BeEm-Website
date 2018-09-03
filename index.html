@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Initiative</title>
+    <title>The BeEm Initiative</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- CSS local files -->
@@ -41,7 +41,7 @@
                         <li><a class="page-scroll" href="#questions" style="text-decoration:none;">Questions of the week</a></li>
                         <li><a class="page-scroll" href="timeline.html" style="text-decoration:none;">Archived questions</a></li>
                         <li><a class="page-scroll" href="#leaderboard" style="text-decoration:none;">Leader Board</a></li>
-                        <li><a class="page-scroll" href="compiler.html" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li>
+                        <li><a class="page-scroll" href="compiler.html" target="_blank" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li>
                     </ul>
                 </nav><!--- END NAV -->
             </div> 
@@ -65,42 +65,48 @@
                 <h2>Questions for the week:</h2>
                 <br>
                 <ol>                    
-                    <li><a class="ques-link" href="questions/1.html" style="text-decoration: none; color:#000;">
-                        <div class="container">
+                    <li>
+                        <!-- <a class="ques-link" href="questions/1.html" style="text-decoration: none; color:#000;"> -->
+                        <!-- <div class="container"> -->
                             <fieldset>
                                 <legend>Question #1 <span class="easy">Easy</span></legend>
-                                <p>Write a C & C++ program to perform input/output of all basic data types and print the factorial of a number.</p>
+                                <p>Given an array where every element occurs three times, except one element which occurs only once. Find the element that occurs once. Expected time complexity is O(n) and O(1) extra space. <br>
+                                        Examples: <br>
+                                        Input: arr[] = {10, 1, 10, 3, 10, 1, 1, 2, 3, 3} <br>
+                                        Output: 2
+                                        </p>
                             </fieldset>
-                        </div>
-                        </a>
+                        <!-- </div> -->
+                        <!-- </a> -->
                     </li>
 
                     <li>
                         <fieldset>
                             <legend>Question #2 <span class="easy">Easy</span></legend>
-                            <p>Imagine you are the son of a farmer. Your dad gives you a task to find out how much grass (approx) two cows have eaten the whole day. But you are not allowed to watch the cow or get anywhere near the place where the cow is tied up. <br> 
-                            You are given the following information :</p>
-                            <ol class="inner-lists">
-                                <li>Both the cows are hungry. And both are tied up in an open land full of grass.</li>
-                                <li>The first cow is tied with a rod. And the second cow is tied with a rope.</li>
-                                <li>The lengths of the rod and the rope are given.</li>
-                            </ol><br>
-                            <p>Write a C/C++ program to find the approximate amount of grass each cow ate.
+                            <p>Code a power function without using multiplication (*)  and division (/) operators. <br>
+                            Example: <br>
+                            Input: 5, 4 <br>
+                            Output: 625
                             </p>
                         </fieldset>
                     </li>
 
                     <li>
                         <fieldset>
-                            <legend>Question #3 <span class="easy">Easy</span></legend>
-                            <p>Imagine you are the mother of a primary-school going child. Your child is given a homework to write Mathematical Tables upto 15 tables. Your child asks for your help to complete the homework. But you have many household chores to take care of.</p>
-                            <p>So you decide to write a C/C++ Program to print the tables.<br>Conditions:
-                            </p>
-                            <ul class="inner-lists">
-                                <li>Your program has to wait until your child copies the tables before going to the next one.</li>
-                            </ul>
+                            <legend>Question #3 <span class="medium">Medium</span></legend>
+                            <p>Given 'n' rows, generate the first 'n' rows of Pascal’s triangle. <br>
+
+                                    For example, <br>
+                                    Input = 5 <br>
+                                    Output <br>
+                                    1 <br>
+                                    1,1 <br>
+                                    1,2,1 <br>
+                                    1,3,3,1 <br>
+                                    1,4,6,4,1</p>
+                            
                         </fieldset>
-                    </li><br>
+                    </li>
 
                     <li>
                         <fieldset>
@@ -189,17 +195,23 @@
     
     <!-- start footer -->
     <footer id="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
+                <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <a href="index.html">
+                        <img src="logo.png" alt="The BeEm Initiative" height="50px" width="60px">
+                    </a>
+                </div> -->
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <p>
+                    <!-- <p> -->
+                    <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
                     <i class="glyphicon glyphicon-copyright-mark"></i> 2018 <a href="index.html">The BeEm Initiative</a>
-                    </p>
+                    <!-- </p> -->
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <p>
+                    <!-- <p> -->
                     Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/Mano-j"><img src="assets/images/superman.png" alt="superman" height="25px" width="30px"></a> &amp; <a href="https://github.com/sprince0031"><img src="assets/images/batman.png" alt="batman" height="25px" width="35px"></a>.
-                    </p>
+                    <!-- </p> -->
                 </div>
             </div>
         </div>
