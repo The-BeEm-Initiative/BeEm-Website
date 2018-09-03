@@ -12,6 +12,13 @@ html, body {
   height: 100%;
 }
 
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+
+}
+
 body {
   background-color: var(--primary-background-colour);
   font-family: 'Exo 2', 'Source Code Pro',  sans-serif;
