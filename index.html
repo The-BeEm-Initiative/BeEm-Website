@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Initiative</title>
+    <title>The BeEm Initiative</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- CSS local files -->
     <link rel="stylesheet" href="css/style-main.css">
@@ -19,7 +20,7 @@
     <!-- <header class="header-content"> -->
     <div class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -28,7 +29,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.html" class="navbar-brand">
-                    <h1 style="margin-top: -8px; color: #000;">The Initiative</h1>
+                    <h1 style="margin-top: -8px; color: #000;">The BeEm Initiative</h1>
                     <!--<img src="#" alt="logo">-->
                 </a>
             </div>
@@ -36,9 +37,11 @@
                 <nav>
                     <ul class="nav navbar-nav navbar-right" style="color:#000;">
                         <li><a class="page-scroll" href="#home" style="text-decoration:none !important;">Home</a></li>
-                        <li><a class="page-scroll" href="#about" style="text-decoration:none;">About</a></li>
+                        <li><a class="page-scroll" href="#footer" style="text-decoration:none;">About</a></li>
                         <li><a class="page-scroll" href="#questions" style="text-decoration:none;">Questions of the week</a></li>
+                        <li><a class="page-scroll" href="timeline.html" style="text-decoration:none;">Archived questions</a></li>
                         <li><a class="page-scroll" href="#leaderboard" style="text-decoration:none;">Leader Board</a></li>
+                        <li><a class="page-scroll" href="compiler.html" target="_blank" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li>
                     </ul>
                 </nav><!--- END NAV -->
             </div> 
@@ -49,135 +52,173 @@
     <!-- end header -->
 
     <!-- start main landing content section -->
-    <section id="home" class="jumbotron">
+    <section id="home" class="jumbotron" style="margin-top:55px;">
+
         <div class="main-content-div">
-            <h2>Working on it...</h2>
         </div>
     </section>
     <!-- end main landing content section -->
 
     <!-- start questions section -->
     <section class="questions" id="questions">
+        <div class="container">
+            <div class="row">
+                <h2>Questions for the week:</h2>
+                <br>
+                <ol>                    
+                    <li>
+                        <!-- <a class="ques-link" href="questions/1.html" style="text-decoration: none; color:#000;"> -->
+                        <!-- <div class="container"> -->
+                            <fieldset>
+                                <legend>Question #1 <span class="easy">Easy</span></legend>
+                                <p>Given an array where every element occurs three times, except one element which occurs only once. Find the element that occurs once. Expected time complexity is O(n) and O(1) extra space. <br>
+                                        Examples: <br>
+                                        Input: arr[] = {10, 1, 10, 3, 10, 1, 1, 2, 3, 3} <br>
+                                        Output: 2
+                                        </p>
+                            </fieldset>
+                        <!-- </div> -->
+                        <!-- </a> -->
+                    </li>
 
-        <h2>Questions for the week:</h2>
-        <br>
-        <ol>
+                    <li>
+                        <fieldset>
+                            <legend>Question #2 <span class="easy">Easy</span></legend>
+                            <p>Code a power function without using multiplication (*)  and division (/) operators. <br>
+                            Example: <br>
+                            Input: 5, 4 <br>
+                            Output: 625
+                            </p>
+                        </fieldset>
+                    </li>
 
-            <li>
-                <fieldset>
-                    <legend>Question #1 <span class="easy">Easy</span></legend>
-                    <p>Write a C & C++ program to perform input/output of all basic data types and print the factorial of a number.</p>
-                </fieldset>
-            </li>
+                    <li>
+                        <fieldset>
+                            <legend>Question #3 <span class="medium">Medium</span></legend>
+                            <p>Given 'n' rows, generate the first 'n' rows of Pascal’s triangle. <br>
 
-            <li>
-                <fieldset>
-                    <legend>Question #2 <span class="easy">Easy</span></legend>
-                    <p>Imagine you are the son of a farmer. Your dad gives you a task to find out how much grass (approx) two cows have eaten the whole day. But you are not allowed to watch the cow or get anywhere near the place where the cow is tied up. <br> 
-                    You are given the following information :</p>
-                    <ol class="inner-lists">
-                        <li>Both the cows are hungry. And both are tied up in an open land full of grass.</li>
-                        <li>The first cow is tied with a rod. And the second cow is tied with a rope.</li>
-                        <li>The lengths of the rod and the rope are given.</li>
-                    </ol><br>
-                    <p>Write a C/C++ program to find the approximate amount of grass each cow ate.
-                    </p>
-                </fieldset>
-            </li>
+                                    For example, <br>
+                                    Input = 5 <br>
+                                    Output <br>
+                                    1 <br>
+                                    1,1 <br>
+                                    1,2,1 <br>
+                                    1,3,3,1 <br>
+                                    1,4,6,4,1</p>
+                            
+                        </fieldset>
+                    </li>
 
-            <li>
-                <fieldset>
-                    <legend>Question #3 <span class="easy">Easy</span></legend>
-                    <p>Imagine you are the mother of a primary-school going child. Your child is given a homework to write Mathematical Tables upto 15 tables. Your child asks for your help to complete the homework. But you have many household chores to take care of.</p>
-                    <p>So you decide to write a C/C++ Program to print the tables.<br>Conditions:
-                    </p>
-                    <ul class="inner-lists">
-                        <li>Your program has to wait until your child copies the tables before going to the next one.</li>
-                    </ul>
-                </fieldset>
-            </li><br>
+                    <li>
+                        <fieldset>
+                            <legend>Question #4</legend>
+                            <p>Imagine you are a middle school teacher, and you’re going into a class just after the maths period. The students were captivated with the greatness of numbers. This being the case you ask each students age, they reply their age in number of days. (Do not consider leap years) <br>Write a C/C++ Program to calculate :</p>
+                            <ul>
+                                <li><span class="easy">Easy</span></li>
+                                <p>1. The age of the student.</p>
+                                <li><span class="medium">Medium</span></li>
+                                <p>2. The number of Years,Months,Weeks,Days the student has lived.</p>
+                            </ul>
+                        </fieldset>
+                    </li><br>
 
-            <li>
-                <fieldset>
-                    <legend>Question #4</legend>
-                    <p>Imagine you are a middle school teacher, and you’re going into a class just after the maths period. The students were captivated with the greatness of numbers. This being the case you ask each students age, they reply their age in number of days. (Do not consider leap years) <br>Write a C/C++ Program to calculate :</p>
-                    <ul>
-                        <li><span class="easy">Easy</span></li>
-                        <p>1. The age of the student.</p>
-                        <li><span class="medium">Medium</span></li>
-                        <p>2. The number of Years,Months,Weeks,Days the student has lived.</p>
-                    </ul>
-                </fieldset>
-            </li><br>
+                    <li>
+                        <fieldset>
+                            <legend>Question #5</legend>
+                            <p>Imagine you have an 8 year old little brother Kumaresh and you’ve lost his calculator. Kumaresh has to do his maths assignment which is due tomorrow. You have a computer, but the computer does not have an internet connection, also it doesn’t have a pre-installed calculator app. Fortunately for Kumaresh you are a computer science student.</p>
+                            <p>You are going to build a C/C++ Program to help your brother do his assignment. Your code should meet the following conditions:</p>
+                            <ul>
+                                <li><span class="easy">Easy</span></li>
+                                <p>1. The operations your calculator should support are : ‘+’, ‘-’, ‘*’, ‘/’, ‘%’</p>
+                                <li><span class="medium">Medium</span></li>
+                                <p>2. The operations your calculator should also support are : ‘^’, ‘√’</p>
+                                <p>3. Your app should not exit unless specified.</p>
+                                <li><span class="hard">Hard</span></li>
+                                <p>4. It should be able to handle any number of inputs.</p>
+                            </ul>
+                        </fieldset>
+                    </li>
 
-            <li>
-                <fieldset>
-                    <legend>Question #5</legend>
-                    <p>Imagine you have an 8 year old little brother Kumaresh and you’ve lost his calculator. Kumaresh has to do his maths assignment which is due tomorrow. You have a computer, but the computer does not have an internet connection, also it doesn’t have a pre-installed calculator app. Fortunately for Kumaresh you are a computer science student.</p>
-                    <p>You are going to build a C/C++ Program to help your brother do his assignment. Your code should meet the following conditions:</p>
-                    <ul>
-                        <li><span class="easy">Easy</span></li>
-                        <p>1. The operations your calculator should support are : ‘+’, ‘-’, ‘*’, ‘/’, ‘%’</p>
-                        <li><span class="medium">Medium</span></li>
-                        <p>2. The operations your calculator should also support are : ‘^’, ‘√’</p>
-                        <p>3. Your app should not exit unless specified.</p>
-                        <li><span class="hard">Hard</span></li>
-                        <p>4. It should be able to handle any number of inputs.</p>
-                    </ul>
-                </fieldset>
-            </li>
+                    <li>
+                        <fieldset>
+                            <legend>Question #6 <span class="hard">Hard</span></legend>
+                            <p>Imagine you are the student representative of your class. Your faculty gives you a list of student names in your class, he/she asks you to create an attendance register for the class.</p>
+                            <p>Write a C/C++ Program to arrange the unordered list of names into an ordered list.</p>
+                        </fieldset>
+                    </li>
 
-            <li>
-                <fieldset>
-                    <legend>Question #6 <span class="hard">Hard</span></legend>
-                    <p>Imagine you are the student representative of your class. Your faculty gives you a list of student names in your class, he/she asks you to create an attendance register for the class.</p>
-                    <p>Write a C/C++ Program to arrange the unordered list of names into an ordered list.</p>
-                </fieldset>
-            </li>
+                    <hr>
+                    <li style="font-size: 30px;">Bonus Question (extra points for that extra edge!)</li>
 
-            <hr>
-            <li style="font-size: 30px;">Bonus Question (extra points for that extra edge!)</li>
+                    <li>
+                        <fieldset>
+                            <legend>Question #7 <span class="hard">Hard (6 pts)</span> </legend>
+                            <p>Imagine you are the student representative of your class. Your <abbr title="Physical Education Director">PED</abbr> gives you a list of student names with their heights in your class, he/she asks you to give him the height of the students one by one as he calls out the names.
+                            </p>
+                            <p>Write a C/C++ Program to print the height of the student for the name of that student being the input.</p>
+                        </fieldset>
+                    </li>
 
-            <li>
-                <fieldset>
-                    <legend>Question #7 <span class="hard">Hard (6 pts)</span> </legend>
-                    <p>Imagine you are the student representative of your class. Your <abbr title="Physical Education Director">PED</abbr> gives you a list of student names with their heights in your class, he/she asks you to give him the height of the students one by one as he calls out the names.
-                    </p>
-                    <p>Write a C/C++ Program to print the height of the student for the name of that student being the input.</p>
-                </fieldset>
-            </li>
+                    <li>
+                        <fieldset>
+                            <legend>Question #8 <span class="hard">Hard (8 pts)</span></legend>
+                            <p>Imagine you are the student representative of your class. Your <abbr title="Physical Education Director">PED</abbr> gives you a list of student names with their heights in your class, he/she asks you to create a list in which the student names are arranged based on their heights.</p>
+                            <p>Write a C/C++ Program to print the names of the students based on their heights.</p>
+                        </fieldset>
+                    </li>
 
-            <li>
-                <fieldset>
-                    <legend>Question #8 <span class="hard">Hard (8 pts)</span></legend>
-                    <p>Imagine you are the student representative of your class. Your <abbr title="Physical Education Director">PED</abbr> gives you a list of student names with their heights in your class, he/she asks you to create a list in which the student names are arranged based on their heights.</p>
-                    <p>Write a C/C++ Program to print the names of the students based on their heights.</p>
-                </fieldset>
-            </li>
+                </ol>
 
-        </ol>
-
-        <h3 style="text-decoration: underline;">Points scoring scheme:</h3>
-        <ul style="list-style: none;">
-            <li><span class="easy">Easy</span> == 1 point</li>
-            <li><span class="medium">Medium</span> == 2 points</li>
-            <li><span class="hard">Hard</span> == 4 points</li>
-        </ul>
-
+                <h3 style="text-decoration: underline;">Points scoring scheme:</h3>
+                <ul style="list-style: none;">
+                    <li><span class="easy">Easy</span> == 1 point</li>
+                    <li><span class="medium">Medium</span> == 2 points</li>
+                    <li><span class="hard">Hard</span> == 4 points</li>
+                </ul>
+            </div>
+        </div>
     </section>
     <!-- end questions section -->
 
     <!-- start leader board section -->
-    <section id="leaderboard">
 
-        <div style="padding-bottom:20px;">
-            <div class="leader-btn">
-                <a href="https://docs.google.com/spreadsheets/d/1uGWLELr0iCXxp-mLhxsWiucdwbH3A7WJ1xmIrhZ0o14/edit?usp=sharing" style="color:#fff; text-decoration: none;" target="_blank">LEADERBOARD</a>
+    <section id="leaderboard">     
+        <div class="container">
+            <div class="row-fluid">
+                <div class="col-md-12" style="padding-bottom:20px;">
+                    <div class="leader-btn">
+                        <a href="https://docs.google.com/spreadsheets/d/1uGWLELr0iCXxp-mLhxsWiucdwbH3A7WJ1xmIrhZ0o14/edit?usp=sharing" style="text-decoration: none;" target="_blank">LEADERBOARD</a>
+                    </div>                    
+                </div>
             </div>
-            
         </div>
 
     </section>
     
+    <!-- start footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <a href="index.html">
+                        <img src="logo.png" alt="The BeEm Initiative" height="50px" width="60px">
+                    </a>
+                </div> -->
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p>
+                    <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
+                    <i class="glyphicon glyphicon-copyright-mark"></i> 2018 <a href="index.html">The BeEm Initiative</a>
+                    </p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p>
+                    Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/Mano-j"><img src="assets/images/superman.png" alt="superman" height="25px" width="30px"></a> &amp; <a href="https://github.com/sprince0031"><img src="assets/images/batman.png" alt="batman" height="25px" width="35px"></a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
 </body>
 </html>

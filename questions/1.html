@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question #1 | The BeEm Initiative</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../css/compiler-css/ide.css">
+    <link rel="stylesheet" href="css-questions/question-style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/compiler-css/codemirror.css">
+
+    <!-- theme css files -->
+    <link rel="stylesheet" href="../css/compiler-css/theme/3024-day.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/3024-night.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/abcdef.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/ambiance.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/base16-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/bespin.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/base16-light.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/blackboard.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/cobalt.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/colorforth.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/dracula.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/duotone-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/duotone-light.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/eclipse.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/elegant.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/erlang-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/gruvbox-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/hopscotch.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/icecoder.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/isotope.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/lesser-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/liquibyte.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/lucario.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/material.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/mbo.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/mdn-like.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/midnight.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/monokai.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/neat.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/neo.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/night.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/oceanic-next.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/panda-syntax.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/paraiso-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/paraiso-light.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/pastel-on-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/railscasts.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/rubyblue.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/seti.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/shadowfox.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/solarized.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/the-matrix.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/tomorrow-night-bright.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/tomorrow-night-eighties.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/ttcn.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/twilight.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/vibrant-ink.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/xq-dark.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/xq-light.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/yeti.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/idea.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/darcula.css">
+    <link rel="stylesheet" href="../css/compiler-css/theme/zenburn.css">
+
+    <script src="../js/compiler-js/codemirror.js"></script>
+    <script src="../js/compiler-js/mode/simple.js"></script>
+    <script src="../js/compiler-js/mode/clike.js"></script>
+    <script src="../js/compiler-js/mode/clojure.js"></script>
+    <script src="../js/compiler-js/mode/crystal.js"></script>
+    <script src="../js/compiler-js/mode/elixir.js"></script>
+    <script src="../js/compiler-js/mode/erlang.js"></script>
+    <script src="../js/compiler-js/mode/go.js"></script>
+    <script src="../js/compiler-js/mode/haskell.js"></script>
+    <script src="../js/compiler-js/mode/javascript.js"></script>
+    <script src="../js/compiler-js/mode/mllike.js"></script>
+    <script src="../js/compiler-js/mode/octave.js"></script>
+    <script src="../js/compiler-js/mode/pascal.js"></script>
+    <script src="../js/compiler-js/mode/python.js"></script>
+    <script src="../js/compiler-js/mode/ruby.js"></script>
+    <script src="../js/compiler-js/mode/rust.js"></script>
+    <script src="../js/compiler-js/mode/shell.js"></script>
+
+    <script src="../js/compiler-js/download.js"></script>
+
+    <link rel="stylesheet" href="../css/compiler-css/addon/dialog.css">
+
+    <script src="../js/compiler-js/addon/searchcursor.js"></script>
+    <script src="../js/compiler-js/addon/search.js"></script>
+    <script src="../js/compiler-js/addon/dialog.js"></script>
+    <script src="../js/compiler-js/addon/matchbrackets.js"></script>
+    <script src="../js/compiler-js/addon/closebrackets.js"></script>
+
+    <script src="../js/compiler-js/keymap/vim.js"></script>
+
+    <!-- <script src="js-questions/1.js"></script> -->
+    <script src="../js/compiler-js/ide.js"></script>
+</head>
+<body>
+    <span id="questionNumber" title="1"></span>
+
+        <div class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="../index.html" class="navbar-brand">
+                        <h1 style="margin-top: -8px; color: #000;">The BeEm Initiative</h1>
+                        <!--<img src="#" alt="logo">-->
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <nav>
+                        <ul class="nav navbar-nav navbar-right" style="color:#000;">
+                            <li><a class="page-scroll" href="../index.html#home" style="text-decoration:none !important;">Home</a></li>
+                            <li><a class="page-scroll" href="#footer" style="text-decoration:none;">About</a></li>
+                            <li><a class="page-scroll" href="../index.html#questions" style="text-decoration:none;">Questions of the week</a></li>
+                            <li><a class="page-scroll" href="../timeline.html" style="text-decoration:none;">Archived questions</a></li>
+                            <li><a class="page-scroll" href="../index.html#leaderboard" style="text-decoration:none;">Leader Board</a></li>
+                            <li><a class="page-scroll" href="../compiler.html" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li>
+                        </ul>
+                    </nav><!--- END NAV -->
+                </div> 
+            </div><!--- END CONTAINER -->
+            <!-- END NAVBAR -->
+        </div>
+
+    <div class="container" style="margin-top:30px;">
+        <div class="questions" id="questions">
+            <div class="row">
+                <h1>Question #1 <span class="easy">Easy</span></h1>
+                <hr>
+            </div>
+            <div class="row" style="padding: 25px; border-width: 2px; border-style: dotted; border-color:#282425; border-radius: 2.5% / 15%; background:rgba(25,25,25,0.25);">
+                <div class="row">
+                    <p>
+                        Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem Lorem ipsum dolorem 
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <fieldset>
+                            <legend>Example Input</legend>
+                            <code style="padding:10px;">Lorem ipsum dolorem</code>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset>
+                            <legend>Example Output</legend>
+                            <code style="padding:10px;">Lorem ipsum dolorem</code>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compiler -->
+    
+    <div class="container" style="background: #282425; margin-bottom: 20px; padding:20px; border-style:solid; border-width:2px; border-color:#282425; border-radius: 1.5% / 1.5%;">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <iframe src="../compiler.html" frameborder="0"></iframe> -->
+                <div class="row" style="padding-right: 35px;">
+                    
+                    <div class="navbar-form navbar-right">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                            <button id="insertTemplateBtn" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Insert template">
+                                <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                            </button>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <select value="34" class="form-control" id="selectLanguageBtn">
+                                <option value="34" selected="selected" mode="text/x-python">Python (3.6.0)</option>
+                                <option value="36" mode="text/x-python">Python (2.7.9)</option>
+                                <option value="4" mode="text/x-csrc">C (gcc 7.2.0)</option>
+                                <option value="10" mode="text/x-c++src">C++ (g++ 7.2.0)</option>
+                                <option value="27" mode="text/x-java">Java (OpenJDK 8)</option>
+                                <option value="28" mode="text/x-java">Java (OpenJDK 7)</option>
+                                <option value="43" mode="text/plain">Text (plain text)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2" style="font-size: 20px !important;"><p style="color: #fff; ">Theme:</p></div>
+                            <div class="col-md-6">
+                                <p><select class="form-control" id="theme_select">
+                                    <option selected>default</option>
+                                    <option>3024-day</option>
+                                    <option>3024-night</option>
+                                    <option>abcdef</option>
+                                    <option>ambiance</option>
+                                    <option>base16-dark</option>
+                                    <option>base16-light</option>
+                                    <option>bespin</option>
+                                    <option>blackboard</option>
+                                    <option>cobalt</option>
+                                    <option>colorforth</option>
+                                    <option>darcula</option>
+                                    <option>dracula</option>
+                                    <option>duotone-dark</option>
+                                    <option>duotone-light</option>
+                                    <option>eclipse</option>
+                                    <option>elegant</option>
+                                    <option>erlang-dark</option>
+                                    <option>gruvbox-dark</option>
+                                    <option>hopscotch</option>
+                                    <option>icecoder</option>
+                                    <option>idea</option>
+                                    <option>isotope</option>
+                                    <option>lesser-dark</option>
+                                    <option>liquibyte</option>
+                                    <option>lucario</option>
+                                    <option>material</option>
+                                    <option>mbo</option>
+                                    <option>mdn-like</option>
+                                    <option>midnight</option>
+                                    <option>monokai</option>
+                                    <option>neat</option>
+                                    <option>neo</option>
+                                    <option>night</option>
+                                    <option>oceanic-next</option>
+                                    <option>panda-syntax</option>
+                                    <option>paraiso-dark</option>
+                                    <option>paraiso-light</option>
+                                    <option>pastel-on-dark</option>
+                                    <option>railscasts</option>
+                                    <option>rubyblue</option>
+                                    <option>seti</option>
+                                    <option>shadowfox</option>
+                                    <option>solarized dark</option>
+                                    <option>solarized light</option>
+                                    <option>the-matrix</option>
+                                    <option>tomorrow-night-bright</option>
+                                    <option>tomorrow-night-eighties</option>
+                                    <option>ttcn</option>
+                                    <option>twilight</option>
+                                    <option>vibrant-ink</option>
+                                    <option>xq-dark</option>
+                                    <option>xq-light</option>
+                                    <option>yeti</option>
+                                    <option>zenburn</option>
+                                </select></p>
+                            </div>
+                            
+                        </div>
+                        <button class="btn btn-success" id="runBtn" data-loading-text="Running...">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run (F9)
+                        </button>
+                        <button class="btn btn-primary" id="saveBtn" data-loading-text="Saving...">
+                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save (Ctrl+S)
+                        </button>
+                        <button class="btn btn-default" id="downloadSourceBtn" data-toggle="tooltip" data-placement="bottom" title="Download source">
+                            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                        </button>
+                        <div class="vertical-spacer"></div>
+                        <input type="checkbox" id="vimCheckBox" data-toggle="toggle" data-on="Vim Mode On" data-off="Vim Mode Off" data-onstyle="success">
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="sourceEditor"></div>
+
+                    <div class="container-fluid">
+                        <div class="row labels">
+                        <div id="inputLabel" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <h4 style="color: #fff;">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Input <small>optional</small>
+                            <button class="btn btn-default pull-right" id="downloadInputBtn" data-toggle="tooltip" data-placement="top" title="Download input">
+                                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                            </button>
+                            </h4>
+                        </div>
+                        <div id="outputLabel" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <h4 style="color: #fff;">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Output <small id="emptyIndicator">empty</small>
+                            <button class="btn btn-default pull-right" id="downloadOutputBtn" data-toggle="tooltip" data-placement="top" title="Download output">
+                                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                            </button>
+                            <small class="pull-right" id="statusLine"></small>
+                            </h4>
+                        </div>
+                        </div>
+
+                        <div class="row ioEditors">
+                            <div id="inputEditor" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
+                            <div id="outputEditor" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
+                        </div>
+                        <!-- <button id="submit" onclick="onSubmit()">Submit</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="margin-top:25px;">
+            <div class="row">
+                <div class="superhero-btn col-md-6">
+                    <button id="submitPublic" onclick="onSubmitPublic()">CHECK</button>
+                </div>
+                <div class="superhero-btn col-md-6">
+                    <button id="submitPrivate" onclick="onSubmitPrivate()">SUBMIT</button>
+                    <!-- <a href="../compiler.html" style="text-decoration: none;" target="_blank">CODE_PLAYGROUND</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End compiler -->
+
+    <!-- start footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p>
+                    <img src="../logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
+                    <i class="glyphicon glyphicon-copyright-mark"></i> 2018 <a href="../index.html">The BeEm Initiative</a>
+                    </p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p>
+                    Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/Mano-j"><img src="../assets/images/superman.png" alt="superman" height="25px" width="30px"></a> &amp; <a href="https://github.com/sprince0031"><img src="../assets/images/batman.png" alt="batman" height="25px" width="35px"></a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+</body>
+</html>

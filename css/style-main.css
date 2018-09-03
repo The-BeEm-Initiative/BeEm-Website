@@ -1,6 +1,13 @@
-/*
- * general
- */
+/* 
+* General
+*/
+
+:root {
+--main-border-colour: #ddd;
+--primary-background-colour: #f8f8f8;
+--secondary-background-colour: #ececec;
+--primary-brand-colour: #1a1a1a;
+}
 
 * {
     box-sizing: border-box;
@@ -40,7 +47,7 @@ a:hover {
 
 body {
   background: #fff;
-  font-family: 'Source Code Pro', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: normal;
@@ -52,6 +59,12 @@ body {
 /* 
  * Navbar
  */
+ .navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+
+}
 .nav .navbar-nav li a {
   color: #000 !important;
   text-decoration: none;
@@ -122,6 +135,14 @@ body {
   -webkit-border-radius: 5px;
 }
 
+.questions li a {
+  box-shadow: none;
+}
+
+.questions li a:hover {
+  box-shadow: 5px 10px !important;
+}
+
 /* 
 * Labels
 */
@@ -153,17 +174,44 @@ body {
   text-align: center;
 }
 
-.leader-btn a {
-  padding: 10px;
-  background: #2e6cd1;
-  color: #fff;
+
+.leader-btn a{
+  padding: 7px;
+  background: #fef200;
+  color: #ee1c25 !important;
+  border-style: solid;
+  border-color: #ee1c25 !important;
   border-radius: 10% / 50%;
-  font-weight: bolder;
+  font-size: 35px;
+  font-weight: 900;
 }
 
 .leader-btn a:hover {
-  background: #fff;
-  color: #2d6cd1 !important;
-  border-color: #2d6cd1;
-  border-width: 5px;
+  background: #fff100;
+  color: #282425 !important;
+  border-color: #fff100 !important;
+  
+}
+
+/* 
+* Footer
+*/
+
+#footer {
+  background-color: var(--primary-brand-colour);
+  border-top: 1px solid var(--main-border-colour);
+  padding-top: 40px;
+  text-align: center;
+  min-height: 100px;
+  color: #777;
+}
+
+#footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ddd;
+}
+
+#footer a:hover {
+  color: #fff;
 }
