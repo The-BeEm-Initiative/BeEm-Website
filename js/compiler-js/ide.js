@@ -595,8 +595,10 @@ function onSubmit(){
   submitFlag = true;
   var questionNumber = Number(document.getElementById("questionNumber").title);
   // alert(testSource[questionNumber] + testInput[questionNumber]);
-  run(btoa(unescape(encodeURIComponent(testSource[questionNumber]))), btoa(unescape(encodeURIComponent(testInput[questionNumber]))));
-  run(btoa(unescape(encodeURIComponent(sourceEditor.getValue()))),btoa(unescape(encodeURIComponent(testInput[questionNumber]))));
+  // run(btoa(unescape(encodeURIComponent(testSource[questionNumber]))), btoa(unescape(encodeURIComponent(testInput[questionNumber]))));
+  run(btoa(unescape(encodeURIComponent(testSource[questionNumber]))), btoa(unescape(encodeURIComponent(inputEditor.getValue())))); // Shouldn't the inputs be gotten from the inputEditor source?
+  // run(btoa(unescape(encodeURIComponent(sourceEditor.getValue()))),btoa(unescape(encodeURIComponent(testInput[questionNumber]))));
+  run(btoa(unescape(encodeURIComponent(sourceEditor.getValue()))),btoa(unescape(encodeURIComponent(inputEditor.getValue())))); // Only then will we be able to test for the inputs given by the user right?
 
 
 }

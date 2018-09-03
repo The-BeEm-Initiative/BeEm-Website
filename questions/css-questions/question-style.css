@@ -102,18 +102,21 @@ html, body {
     text-align: center;
 }
 
-.playground-btn a{
-    padding: 7px;
+.playground-btn button{
+    padding: 5px 10px;
     background: #fef200;
     color: #ee1c25 !important;
     border-style: solid;
     border-color: #ee1c25 !important;
-    border-radius: 10% / 50%;
+    border-radius: 20% / 50%;
     font-size: 35px;
     font-weight: 900;
+    transition: 0.25s;
+    -moz-transition: 0.25s;
+    -webkit-transition: 0.25s;
 }
   
-.playground-btn a:hover {
+.playground-btn button:hover {
 background: #fff100;
 color: #282425 !important;
 border-color: #fff100 !important;
