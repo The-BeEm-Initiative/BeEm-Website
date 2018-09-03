@@ -134,6 +134,7 @@
                             <li><a class="page-scroll" href="../index.html#home" style="text-decoration:none !important;">Home</a></li>
                             <li><a class="page-scroll" href="#footer" style="text-decoration:none;">About</a></li>
                             <li><a class="page-scroll" href="../index.html#questions" style="text-decoration:none;">Questions of the week</a></li>
+                            <li><a class="page-scroll" href="../timeline.html" style="text-decoration:none;">Archived questions</a></li>
                             <li><a class="page-scroll" href="../index.html#leaderboard" style="text-decoration:none;">Leader Board</a></li>
                             <li><a class="page-scroll" href="../compiler.html" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li>
                         </ul>
@@ -310,8 +311,11 @@
         </div>
         <div class="container-fluid" style="margin-top:25px;">
             <div class="row">
-                <div class="playground-btn">
-                    <button id="submit" onclick="onSubmit()">SUBMIT</button>
+                <div class="superhero-btn col-md-6">
+                    <button id="submitPublic" onclick="onSubmitPublic()">CHECK</button>
+                </div>
+                <div class="superhero-btn col-md-6">
+                    <button id="submitPrivate" onclick="onSubmitPrivate()">SUBMIT</button>
                     <!-- <a href="../compiler.html" style="text-decoration: none;" target="_blank">CODE_PLAYGROUND</a> -->
                 </div>
             </div>

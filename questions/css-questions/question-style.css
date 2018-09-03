@@ -98,17 +98,17 @@ html, body {
 /* 
 * Playgound btn
 */
-.playground-btn {
+.superhero-btn {
     text-align: center;
 }
 
-.playground-btn button{
+.superhero-btn button{
     padding: 5px 10px;
     background: #fef200;
     color: #ee1c25 !important;
     border-style: solid;
     border-color: #ee1c25 !important;
-    border-radius: 20% / 50%;
+    border-radius: 25% / 50%;
     font-size: 35px;
     font-weight: 900;
     transition: 0.25s;
@@ -116,7 +116,7 @@ html, body {
     -webkit-transition: 0.25s;
 }
   
-.playground-btn button:hover {
+.superhero-btn button:hover {
 background: #fff100;
 color: #282425 !important;
 border-color: #fff100 !important;
