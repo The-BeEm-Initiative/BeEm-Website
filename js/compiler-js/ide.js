@@ -3,10 +3,9 @@ var SUBMISSION_CHECK_TIMEOUT = 10; // in ms
 var WAIT = localStorageGetItem("wait") == "true";
 
 var sourceEditor, inputEditor, outputEditor;
-var $insertTemplateBtn, $selectLanguageBtn, $runBtn, $saveBtn, $vimCheckBox, $selectQuestionBtn; // -m
-//    
+var $insertTemplateBtn, $selectLanguageBtn, $runBtn, $saveBtn, $vimCheckBox; 
 var $statusLine, $emptyIndicator;
-var timeStart, timeEnd;
+var timeStart, timeEnd, submitFlag;
 
 function getIdFromURI() {
   return location.search.substr(1).trim();
@@ -53,9 +52,22 @@ function handleResult(data) { // this is where the validation based on fetched r
     stdout += (stdout == "" ? "" : "\n") + stderr;
   }
 
-  outputEditor.setValue(stdout);
+  // outputEditor.setValue(stdout);
 
-  updateEmptyIndicator();
+  // updateEmptyIndicator();
+
+  if (submitFlag != true){
+    outputEditor.setValue(stdout);
+    // userOutput[i] = stdout;
+    // i++;
+    updateEmptyIndicator();
+  }
+  else{
+    // expectOutput[i] = stdout ;
+    // i++;
+    alert("Expected output = " + stdout );
+    submitFlag = false;
+  }
   $runBtn.button("reset");
 }
 
@@ -67,7 +79,7 @@ function toggleVim() {
   focusAndSetCursorAtTheEnd();
 }
 
-function run() {
+function run(sourceValue, inputValue) {
   if (sourceEditor.getValue().trim() == "") {
     alert("Source code can't be empty.");
     return;
@@ -76,8 +88,7 @@ function run() {
   }
 
 
-  var sourceValue = btoa(unescape(encodeURIComponent(sourceEditor.getValue())));
-  var inputValue = btoa(unescape(encodeURIComponent(inputEditor.getValue())));
+
   var languageId = $selectLanguageBtn.val();
   var data = {
     source_code: sourceValue,
@@ -204,7 +215,6 @@ function initializeElements() {
   $vimCheckBox = $("#vimCheckBox");
   $emptyIndicator = $("#emptyIndicator");
   $statusLine = $("#statusLine");
-  $selectQuestionBtn = $("question_selector");                          //- m
 }
 
 function localStorageSetItem(key, value) {
@@ -299,7 +309,7 @@ $(document).ready(function() {
     var keyCode = e.keyCode || e.which;
     if (keyCode == 120) { // F9
       e.preventDefault();
-      run();
+      run(btoa(unescape(encodeURIComponent(sourceEditor.getValue()))), btoa(unescape(encodeURIComponent(inputEditor.getValue()))));
     } else if (keyCode == 119) { // F8
       e.preventDefault();
       var url = prompt("Enter URL of Judge0 API:", BASE_URL);
@@ -326,7 +336,7 @@ $(document).ready(function() {
   });
 
   $runBtn.click(function(e) {
-    run();
+    run(btoa(unescape(encodeURIComponent(sourceEditor.getValue()))), btoa(unescape(encodeURIComponent(inputEditor.getValue()))));
   });
 
   CodeMirror.commands.save = function(){ save(); };
@@ -352,11 +362,6 @@ $(document).ready(function() {
   });
 });
 
-//
-// namba ipothiku ovoru question ku oru thani page create panalama?  yes!but ipo iruka questionsla basic ah dhaana da irukum?? 
-// *Until the cms is ready that is* oru template create panita aprom copy paste thaane.
-// the monthly traffic limit is ~ 10gb pod and the disk space alocated is 1gb I think. That should be enough I guess yeah  brb
-// apo podhum nenaikura okay
 
 // Template Sources
 var bashSource = "echo \"hello, world\"\n";
@@ -536,8 +541,16 @@ var fileNames = {
 
 
 
-// var testInput = {
-//   1: "mango",
+// function giveInput(){
+
+
+
+// }
+
+
+
+var testInput = {
+  1: "mango"
 //   2:  ,
 //   3:  ,
 //   4:  ,
@@ -553,10 +566,19 @@ var fileNames = {
 //   14:  ,
 //   15:  
 
-// };
+};
 
-
-
+var testSource = {
+  1:  "\
+  #include <stdio.h>\n\
+  \n\
+  int main(void) {\n\
+      char name[7];\n\
+      scanf(\"%s\",&name);\n\
+      printf(\"hello, %s\\n\",name);\n\
+      return 0;\n\
+    }"
+  };
 
 // // Testing 
 // function Testing(){
@@ -569,18 +591,26 @@ var fileNames = {
 
 // }
 
+function onSubmit(){
+  submitFlag = true;
+  var questionNumber = Number(document.getElementById("questionNumber").title);
+  // alert(testSource[questionNumber] + testInput[questionNumber]);
+  run(btoa(unescape(encodeURIComponent(testSource[questionNumber]))), btoa(unescape(encodeURIComponent(testInput[questionNumber]))));
+  run(btoa(unescape(encodeURIComponent(sourceEditor.getValue()))),btoa(unescape(encodeURIComponent(testInput[questionNumber]))));
 
+
+}
 
 // var testSourceC = {
 //   1:  "\
 //   #include <stdio.h>\n\
 //   \n\
 //   int main(void) {\n\
-//       char name[];\n\
-//       scanf(%s,&name);\n\
+//       char name[7];\n\
+//       scanf(\"%s\",&name);\n\
 //       printf(\"hello, %s\\n\",name);\n\
 //       return 0;\n\
-//   }\n;",
+//   }\n",
 //   2:  ,
 //   3:  ,
 //   4:  ,
